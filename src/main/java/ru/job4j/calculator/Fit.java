@@ -14,7 +14,7 @@ public class Fit {
     public static void main(String[] args) {
         double man = Fit.manWeight(190);
         System.out.println("Man 190 is " + man + " weight");
-        double woman = Fit.womanWeight(175);
-        System.out.println("Woman 170 is " + woman + " weight");
+        double woman = Fit.womanWeight(173);
+        System.out.println("Woman 173 is " + woman + " weight");
     }
 }
