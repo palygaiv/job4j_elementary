@@ -14,25 +14,33 @@ public class SwitchArrayTest {
         Assert.assertArrayEquals(expected, result);
     }
 
-    public static int[] swap(int[] array, int source, int dest) {
-        int temp = array[source];
-        array[source] = array[dest];
-        array[dest] = temp;
-        return array;
+    @Test
+    public void whenSwap1to7() {
+        int[] input = {1, 2, 3, 4, 5, 6, 7, 8};
+        int source = 1;
+        int dest = 7;
+        int[] result = SwitchArray.swap(input, source, dest);
+        int[] expected = {1, 8, 3, 4, 5, 6, 7, 2};
+        Assert.assertArrayEquals(expected, result);
     }
 
-    public static int[] swapBorder(int[] array) {
-        int temp = array[0];
-        array[0] = array[array.length - 1];
-        array[array.length - 1] = temp;
-        return array;
+    @Test
+    public void whenSwap0to0() {
+        int[] input = {1, 2, 3, 4, 5, 6, 7, 8};
+        int source = 0;
+        int dest = 0;
+        int[] result = SwitchArray.swap(input, source, dest);
+        int[] expected = {1, 2, 3, 4, 5, 6, 7, 8};
+        Assert.assertArrayEquals(expected, result);
     }
 
-    public static void main(String[] args) {
-        int[] nums = new int[] {1, 2, 3, 4, 5, 6};
-        int[] rsl = swapBorder(nums);
-        for (int index = 0; index < rsl.length; index++) {
-            System.out.println(rsl[index]);
-        }
+    @Test
+    public void whenSwap5to6() {
+        int[] input = {1, 2, 3, 4, 5, 6, 7, 8};
+        int source = 5;
+        int dest = 6;
+        int[] result = SwitchArray.swap(input, source, dest);
+        int[] expected = {1, 2, 3, 4, 5, 7, 6, 8};
+        Assert.assertArrayEquals(expected, result);
     }
 }
